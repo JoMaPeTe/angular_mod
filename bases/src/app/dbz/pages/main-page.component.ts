@@ -26,7 +26,7 @@ export class MainPageComponent {
     console.log(character);
     this.characters.push(character);
   }
-  deleteCharacterById(id: string): void {
-    this.characters = this.characters.filter((character) => character.name !== id);
+  deleteCharacterById(id: number): void {
+    this.characters = this.characters.filter((character, index) => index !== id);
   }
 }

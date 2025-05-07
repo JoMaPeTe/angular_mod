@@ -1,4 +1,4 @@
-import {  Component, Input } from '@angular/core';
+import {  Component, EventEmitter, Input, Output } from '@angular/core';
 import { Character } from '../../interfaces/character.interface';
 
 @Component({
@@ -15,4 +15,12 @@ export class ListComponent {
     power: 10,
   }
 ]
+@Output()
+  public onDeleteCharacter: EventEmitter<number> = new EventEmitter();
+deleteCharacter(index?: number): void {
+  if (!index) return;
+  console.log("List Component");
+  console.log(index);
+  this.onDeleteCharacter.emit(index);
 }
+ }
