@@ -17,8 +17,8 @@ export class ListComponent {
 ]
 @Output()
   public onDeleteCharacter: EventEmitter<number> = new EventEmitter();
-deleteCharacter(index?: number): void {
-  if (!index) return;
+deleteCharacter(index: number): void {
+  // if (!index) return;
   console.log("List Component");
   console.log(index);
   this.onDeleteCharacter.emit(index);

@@ -27,6 +27,7 @@ export class MainPageComponent {
     this.characters.push(character);
   }
   deleteCharacterById(id: number): void {
-    this.characters = this.characters.filter((character, index) => index !== id);
+    this.characters.splice(id,1);
+    // this.characters.filter((character, index) => index !== id);
   }
 }
