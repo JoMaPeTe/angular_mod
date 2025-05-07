@@ -21,4 +21,12 @@ export class MainPageComponent {
       power: 7500,
     },
   ];
+  onNewCharacter(character: Character): void {
+    console.log("Main Page");
+    console.log(character);
+    this.characters.push(character);
+  }
+  deleteCharacterById(id: string): void {
+    this.characters = this.characters.filter((character) => character.name !== id);
+  }
 }
